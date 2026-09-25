@@ -6,9 +6,9 @@ h1 {font-family: Optima, sans-serif;
 h2 {font-family: Optima, sans-serif;
 	font-size: xx-large;
 	margin: 1em 0em 0.5em 0em}
-u {font-family: Arial, sans-serif;
- 	font-size: large;
- 	text-decoration-line: none;}
+h3 {font-family: Optima, sans-serif;
+	font-size: x-large;
+	margin: 2em 0em 0.5em 0em}
 p {font-family: Gill Sans, sans-serif;
 	font-size: large;
 	margin: 0em 0em 0.5em 0em}
@@ -34,7 +34,10 @@ div {margin: 0em 5em 3em 5em}
 	text-align: left;
 	font-size: xx-large}
 .gfg {position: relative;
-	width: 100%;
-	text-align: center}
-
+	text-align: center;
+	margin: 0em 5em 3em 5em}
+table {font-family: Gill Sans, sans-serif;
+	font-size: large}
+th, td {padding: 0.4em;
+	text-align: left}
 
