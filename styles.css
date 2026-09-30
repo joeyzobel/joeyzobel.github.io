@@ -1,4 +1,5 @@
-body {background-color: snow;}
+body {background-color: snow;
+	margin: 0}
 h1 {font-family: Optima, sans-serif;
 	margin-upper: 0.2em;
 	margin-left: 1em;
@@ -10,10 +11,11 @@ h3 {font-family: Optima, sans-serif;
 	font-size: x-large;
 	margin: 2em 0em 0.5em 0em}
 p {font-family: Gill Sans, sans-serif;
-	font-size: large;
-	margin: 0em 0em 0.5em 0em}
+	font-size: x-large;
+	margin: 0em 0em 0.5em 0em;
+	line-height: 125%}
 ul {list-style-type: none;
-	margin: -2.5em 0em 5em 2.5em;
+	margin: -0.5em 0em 5em 8em;
 	padding: 0;
 	overflow: hidden}
 ul li {float: left}
@@ -24,20 +26,127 @@ ul li a {display: block;
 	font-family: Gill Sans, sans-serif;
 	text-decoration: none;
 	font-size: medium}
-ul li a:hover {background-color: black;
-	color: white}
-div {margin: 0em 5em 3em 5em}
-.text-container {position: absolute;
-	color: black;
-	background-color: snow;
-	padding: 0.6em;
-	text-align: left;
-	font-size: xx-large}
+
+.body-text {margin: 0em 8em 3em 8em}
+
+
+
 .gfg {position: relative;
 	text-align: center;
 	margin: 0em 5em 3em 5em}
+
 table {font-family: Gill Sans, sans-serif;
 	font-size: large}
 th, td {padding: 0.4em;
 	text-align: left}
 
+
+
+.heading-image-container {display: grid;
+	grid-template-areas: "overlay";
+	margin: 0 6em}
+
+.heading-image-container > * {grid-area: overlay}
+
+.heading-image {max-width: 100%;
+	object-fit: cover;
+	width: auto;
+	margin: 0em 0em 0em 0em}
+
+.text-container-title {color: black;
+	background-color: snow;
+	justify-self: start;
+	align-self: start;
+	padding: 0.6em;
+	text-align: left;
+	font-size: xx-large}
+
+.text-container-title h2 {margin: 0}
+
+.text-container-caption {color: black;
+	background-color: snow;
+	justify-self: end;
+	align-self: center;
+	padding: 0.6em;
+	text-align: right;
+	font-size: small;
+	margin: 0 6em}
+
+.text-container-caption p {font-size: small;
+	margin: 0}
+
+.site-header {left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding-left: 0}
+
+.header-container {display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0em;
+	align-items: center;
+	background-color: lightblue; 
+	width: 100%;
+	height: 8em; 
+	margin: 0;
+	padding: 1rem 0rem 1rem 0rem;
+	position: fixed}
+
+.header-container a {color: black;
+	text-decoration: none}
+
+.site-title {width: 100%;
+	margin: 0em 5em 0em 5em}
+.site-title h1 {margin: 0.1em}
+
+.site-title a {color: black; 
+	text-decoration: none}
+
+.main-nav {width: 100%;
+	background-color: #84B1C2;
+	margin: 0em 5em 0em 5em}
+
+.nav-list {flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0}
+
+.nav-list li a {display: block;
+	color: black;
+	text-align: center;
+	padding: 1em 1em;
+	font-family: Gill Sans, sans-serif;
+	text-decoration: none;
+	font-size: medium}
+
+.nav-list li a:hover {background-color: darkblue;
+	color: white}
+
+.nav-toggle {display: none;
+	background: none;
+	border: none;
+	font-size: 1.8rem;
+	cursor: pointer}
+
+.nav-menu {}
+
+.under-nav {height:12em}
+
+
+
+.poster-div {display: flex;
+	flex-wrap: wrap;
+	gap: 0em;
+	margin: 0em 6em 3em 6em;
+	justify-content: flex-start;}
+.poster-box {flex: 1 1 22em;
+	max-width: 100%;
+	margin: 0em 1em 0em 1em}
+
+.poster-cell {max-width:14em; 
+	min-width: 9em;}
+.poster-title-cell {max-width:18em;
+	min-width: 12em;}
+
+.poster-cell img {max-width: 100%;
+	border: solid black}
