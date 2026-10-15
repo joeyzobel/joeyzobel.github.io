@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joey Zobel</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link rel="stylesheet" href="styles.css">
@@ -14,12 +15,15 @@
       <div class = "site-title">
 	<a href = "index.html"><h1>Joey Zobel</h1></a>
       </div>
-      <nav class = "main-nav">
+
+      <button class = "hamburger-button" id = "menuToggle" aria-label = "Toggle Navigation">&#9776; </button>
+
+      <nav class = "main-nav" id = "mainNav">
         <ul class = "nav-list">
-          <li><a href="index.html">Home</a></li>
-	  <li><a href="cv.html">CV</a></li>
-	  <li><a href="pastwork.html">Past Work</a></li>
-	  <li><a href="getintouch.html">Get in Touch</a></li>
+          <li><a href="index.html" class="menu-link">Home</a></li>
+	  <li><a href="cv.html" class="menu-link">CV</a></li>
+	  <li><a href="pastwork.html" class="menu-link">Past Work</a></li>
+	  <li><a href="getintouch.html" class="menu-link">Get in Touch</a></li>
         </ul>
       </nav>
     </div>
@@ -39,47 +43,94 @@
 	
   </div>
 
-    <div style = "margin: 2em 5em 3em 6em">
+    <div class = "cv-block">
 	<h3> Education </h3>
 	<table>
 		<tr>
 			<td>In progress</td>
 
 			<td> 
-			<a href="https://as.nyu.edu/departments/linguistics/about.html">
+			<a href="https://as.nyu.edu/departments/linguistics/about.html" target="_blank">
 			<img src="nyu.png" alt="New York University seal" 
-				style="max-width: 3em; 
-					float: left;
-					margin: 0em 0em 0em 0em">
+				class="college-icon">
 			</a>
 			</td>
 
-			<td><p style="margin: 0em 0em 0.25em 0em; font-size: large" >Ph.D. in Linguistics</p> 
-			<p style="font-size: large">New York University</p></td>
+			<td> Ph.D. in Linguistics <br> New York University </td>
 
-			<td>Advisor(s): TBD</td>
+			<td>Advisor: Laurel MacKenzie</td>
 		</tr>
 		<tr>
 			<td> 2025 </td>
 
 			<td> 
-			<a href="https://www.pomona.edu/academics/departments/linguistics-cognitive-science">
+			<a href="https://www.pomona.edu/academics/departments/linguistics-cognitive-science" target="_blank">
 			<img src="pomona.png" alt="Pomona College seal" 
-				style="max-width: 3em; 
-					float: left;
-					margin: 0em 0em 0em 0em">
+				class = "college-icon">
 			</a>
 			</td>
 
-			<td><p style="margin: 0em 0em 0.25em 0em; font-size: large"> B.A. in Linguistics, <i>cum laude</i> </p>
-			<p style="font-size: large">Pomona College</p></td>
+			<td> B.A. in Linguistics, <i>cum laude</i> <br> Pomona College</td>
 
 			<td>Minors: Mathematics, Late Antique–Medieval Studies</td>
 		</tr>
 	</table>
-    	</div>
+    </div>
+    <div class = "cv-block">
+	<h3> Presentations </h3>
+	    <table>
+		<tr>
+			<td class = "cv-subheading"> Posters </td>
+		</tr>
+		<tr> 
+			<td> August 2025 </td>
+			<td> 
+				<a href="https://drive.google.com/file/d/19z_r-PMjOC52BGFAj1cnNK6NddfbhJ2d/view" target="_blank"> 
+				<img src="lds_logo_transparent.png"
+					class="college-icon">
+				</a>
+			</td>
+			<td class = "cv-cell">Joey Zobel <br><I>advised by:</I> Lily&nbsp;Zihui&nbsp;Zhu, Elika&nbsp;Bergelson </td>
+			<td class = "cv-cell"><i> How recognizable are objects in infants' lives? An adult control study of word comprehension </i></td>
+			<td class = "cv-cell-wide"> 2025 Harvard University Lab for Developmental Studies Summer Internship Poster Fair </td>
+		</tr>
+		<tr>
+			<td> September 2024 </td>
+			<td> 
+				<a href="https://drive.google.com/file/d/11WxwkCC4HOx_d-R3L9W18hzUFJrWka9r/view?usp=sharing" target="_blank"> 
+				<img src="pomona.png"
+					class="college-icon">
+				</a>
+			</td>
+			<td class = "cv-cell">Joey Zobel <br> <i>advised by:</i> Kenneth&nbsp;B.&nbsp;Wolf </td>
+			<td class = "cv-cell"><i> The Carolingian Renaissance and Linguistic Change at the Abbey of Saint-Denis </i></td>
+			<td class = "cv-cell-wide"> 2024 Pomona College Intensive Summer Experience Symposium </td>
+		</tr>
+		<tr>
+			<td> September 2023 </td>
+			<td> 
+				<a href="https://drive.google.com/file/d/1kuePO1rBtuh-siHfEqa5TKdX7eO0k5cV/view?usp=sharing" target="_blank"> 
+				<img src="pomona.png"
+					class="college-icon">
+				</a>
+			</td>
+			<td class = "cv-cell">Joey Zobel <br> <i>advised by:</i> Ami&nbsp;Radunskaya </td>
+			<td class = "cv-cell"><i> Characterizing and Modeling Drinking Behavior in Non-Human Primates </i></td>
+			<td class = "cv-cell-wide"> 2023 Pomona College Intensive Summer Experience Symposium </td>
+		</tr>
+	    </table>
+    </div>
 
     <div class = "footer"> </div>
+
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+  </script>
 
   </body>
 </html>
