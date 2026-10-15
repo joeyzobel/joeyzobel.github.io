@@ -1,24 +1,139 @@
+.site-header {left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding-left: 0}
+
+.header-container {display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0em;
+	align-items: center;
+	background-color: lightblue; 
+	width: 100%;
+	margin: 0;
+	padding: 1em 0em 1em 0em;
+	position: fixed}
+
+.header-container a {color: black;
+	text-decoration: none}
+
+.site-title {width: 100%;
+	margin: 0em 5em 0em 5em;
+	display: flex}
+
+@media (max-width: 767px) {
+	.site-title {width: auto;
+		margin: 0em 0.5em 0em 2em}}
+
+.site-title h1 {margin: 0.1em}
+
+@media (max-width: 767px) {
+	.site-title h1{font-size: 250%}}
+
+.site-title a {color: black; 
+	text-decoration: none}
+
+.main-nav {width: 100%;
+	background-color: #84B1C2;
+	margin: 0em 5em 0em 5em}
+
+.nav-list {flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0;
+	list-style: none;
+	padding: 0}
+
+.menu-link {display: block;
+	color: black;
+	text-align: center;
+	padding: 1em 1em;
+	font-family: Gill Sans, sans-serif;
+	text-decoration: none;
+	font-size: medium}
+
+.hamburger-button {display: none;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	margin-right: 1em;
+	cursor: pointer}
+
+@media (max-width: 767px) {
+	.hamburger-button {display: flex}
+
+	.main-nav {display: none;
+		width: 100%;
+		margin: 0;
+		position: absolute;
+		top: 100%;
+		left: 0}
+
+	.main-nav.active {display: block}
+
+	.nav-list {flex-direction: column;
+		width: 100%}
+
+	.nav-list li {width: 100%}
+
+	.menu-link {border-top: 1px solid rgba(0, 0, 0, 0.1)}
+	}
+
+.nav-list li a:hover {background-color: darkblue;
+	color: white}
+
+
+
+.nav-toggle {display: none;
+	background: none;
+	border: none;
+	font-size: 1.8rem;
+	cursor: pointer}
+
+.nav-menu {}
+
+.under-nav {height:12em}
+
+@media (max-width: 767px) {
+	.under-nav {height: 7em}}
+
+.footer {height: 6em}
+
+
+
+
 body {background-color: snow;
 	margin: 0}
+
 h1 {font-family: Optima, sans-serif;
 	margin-upper: 0.2em;
 	margin-left: 1em;
 	font-size: 300%}
+
 h2 {font-family: Optima, sans-serif;
 	font-size: xx-large;
 	margin: 1em 0em 0.5em 0em}
+
 h3 {font-family: Optima, sans-serif;
 	font-size: x-large;
 	margin: 2em 0em 0.5em 0em}
+
 p {font-family: Gill Sans, sans-serif;
 	font-size: x-large;
 	margin: 0em 0em 0.5em 0em;
 	line-height: 125%}
+
+@media (max-width: 767px) {
+	p {font-size: large}}
+
 ul {list-style-type: none;
 	margin: -0.5em 0em 5em 8em;
 	padding: 0;
 	overflow: hidden}
+
 ul li {float: left}
+
 ul li a {display: block;
 	color: black;
 	text-align: center;
@@ -27,8 +142,48 @@ ul li a {display: block;
 	text-decoration: none;
 	font-size: medium}
 
-.body-text {margin: 0em 8em 3em 8em}
+.body-div {margin: 0em 8em 3em 8em}
 
+@media (max-width: 767px) {
+	.body-div {margin: 0em 3em 3em 3em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em}}
+
+.headshot-div {width: 17em;
+		height: 17em;
+		float: left;
+		margin: 0em 1.5em 1em 0em}
+
+@media (max-width: 767px) {
+	.headshot-div {width: 100%;
+		height: auto;
+		float: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0}}
+
+.headshot {margin: 0;
+	width: 17em;
+	height: 17em}
+
+@media (max-width: 767px) {
+	.headshot {width: 14em;
+		height: 14em}}
+
+.h2-index {}
+
+@media (max-width: 767px) {
+	.h2-index{margin: 0;
+		font-size: x-large}}
+
+.ipa {font-family: arial, sans-serif; 
+	text-decoration-line: none; 
+	font-size: x-large}
+
+@media (max-width: 767px) {
+	.ipa{font-size: large}}
 
 
 .gfg {position: relative;
@@ -75,64 +230,21 @@ th, td {padding: 0.4em;
 .text-container-caption p {font-size: small;
 	margin: 0}
 
-.site-header {left: 0;
-	right: 0;
-	top: 0;
-	margin: 0;
-	padding-left: 0}
+.cv-block {margin: 2em 5em 3em 6em}
 
-.header-container {display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 0em;
-	align-items: center;
-	background-color: lightblue; 
-	width: 100%;
-	height: 8em; 
-	margin: 0;
-	padding: 1rem 0rem 1rem 0rem;
-	position: fixed}
+.cv-subheading {font-family: Optima, sans-serif;
+	font-weight: bold;
+	font-size: 115%}
 
-.header-container a {color: black;
-	text-decoration: none}
+.cv-cell {max-width: 12em}
 
-.site-title {width: 100%;
-	margin: 0em 5em 0em 5em}
-.site-title h1 {margin: 0.1em}
+.cv-cell-wide {max-width: 15em}
 
-.site-title a {color: black; 
-	text-decoration: none}
+.college-icon {max-width: 3em;
+	margin: 0em 0em 0em 0em}
 
-.main-nav {width: 100%;
-	background-color: #84B1C2;
-	margin: 0em 5em 0em 5em}
-
-.nav-list {flex-wrap: wrap;
-	justify-content: flex-start;
+.poster-thumbnail{max-width: 5em;
 	margin: 0}
-
-.nav-list li a {display: block;
-	color: black;
-	text-align: center;
-	padding: 1em 1em;
-	font-family: Gill Sans, sans-serif;
-	text-decoration: none;
-	font-size: medium}
-
-.nav-list li a:hover {background-color: darkblue;
-	color: white}
-
-.nav-toggle {display: none;
-	background: none;
-	border: none;
-	font-size: 1.8rem;
-	cursor: pointer}
-
-.nav-menu {}
-
-.under-nav {height:12em}
-
-.footer {height: 6em}
 
 
 .poster-div {display: flex;
