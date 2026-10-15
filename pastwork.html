@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joey Zobel</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link rel="stylesheet" href="styles.css">
@@ -13,12 +14,15 @@
       <div class = "site-title">
 	<a href = "index.html"><h1>Joey Zobel</h1></a>
       </div>
-      <nav class = "main-nav">
+
+      <button class = "hamburger-button" id = "menuToggle" aria-label = "Toggle Navigation">&#9776; </button>
+
+      <nav class = "main-nav" id = "mainNav">
         <ul class = "nav-list">
-          <li><a href="index.html">Home</a></li>
-	  <li><a href="cv.html">CV</a></li>
-	  <li><a href="pastwork.html">Past Work</a></li>
-	  <li><a href="getintouch.html">Get in Touch</a></li>
+          <li><a href="index.html" class="menu-link">Home</a></li>
+	  <li><a href="cv.html" class="menu-link">CV</a></li>
+	  <li><a href="pastwork.html" class="menu-link">Past Work</a></li>
+	  <li><a href="getintouch.html" class="menu-link">Get in Touch</a></li>
         </ul>
       </nav>
     </div>
@@ -77,7 +81,7 @@
 			</td>
 
 			<td class="poster-cell">
-				<a href="https://drive.google.com/file/d/11WxwkCC4HOx_d-R3L9W18hzUFJrWka9r/view?usp=sharing" target="_blank"">
+				<a href="https://drive.google.com/file/d/11WxwkCC4HOx_d-R3L9W18hzUFJrWka9r/view?usp=sharing" target="_blank">
 				<img src="carolingian_renaissance.png" title="Carolingian Renaissance Poster">
 				</a>
 			</td>
@@ -97,7 +101,7 @@
 			</td>
 
 			<td class="poster-cell">
-				<a href="https://drive.google.com/file/d/1kuePO1rBtuh-siHfEqa5TKdX7eO0k5cV/view?usp=sharing target="_blank"">
+				<a href="https://drive.google.com/file/d/1kuePO1rBtuh-siHfEqa5TKdX7eO0k5cV/view?usp=sharing" target="_blank">
 				<img src="monkeys.png" title="Primate Poster">
 				</a>
 			</td>
@@ -107,6 +111,15 @@
 </div>
 
     <div class = "footer"> </div>
+
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+  </script>
 
   </body>
 </html>
