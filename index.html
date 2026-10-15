@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joey Zobel</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link rel="stylesheet" href="styles.css">
@@ -15,12 +16,15 @@
       <div class = "site-title">
 	<a href = "index.html"><h1>Joey Zobel</h1></a>
       </div>
-      <nav class = "main-nav">
+
+      <button class = "hamburger-button" id = "menuToggle" aria-label = "Toggle Navigation">&#9776; </button>
+
+      <nav class = "main-nav" id = "mainNav">
         <ul class = "nav-list">
-          <li><a href="index.html">Home</a></li>
-	  <li><a href="cv.html">CV</a></li>
-	  <li><a href="pastwork.html">Past Work</a></li>
-	  <li><a href="getintouch.html">Get in Touch</a></li>
+          <li><a href="index.html" class="menu-link">Home</a></li>
+	  <li><a href="cv.html" class="menu-link">CV</a></li>
+	  <li><a href="pastwork.html" class="menu-link">Past Work</a></li>
+	  <li><a href="getintouch.html" class="menu-link">Get in Touch</a></li>
         </ul>
       </nav>
     </div>
@@ -29,30 +33,29 @@
   <div class = "under-nav"></div>
 
 
-    <div class = "body-text" style = "width: auto">
+    <div class = "body-div">
 
-	<img src="headshot.png" alt="Joey Zobel headshot" 
-		style="width:17em;
-			height:17em; 
-			float:left; 
-			margin: 0em 2em 1em 0em">
+	<div class = "headshot-div">
+		<img src="headshot-2-cropped.png" alt="Joey Zobel headshot" 
+			class="headshot">
+	</div>
 
-	<h2>
+	<h2 class = "h2-index">
 	About me
 	</h2>
 
     	<p>
-Hi! I'm Joey Zobel <u style="font-family: arial, sans-serif; text-decoration-line: none; font-size: x-large">(/ˈdʒoʊi ˈzoʊbɫ̩/) (he/him/his)</u>. I'm a sociophonetician and Ph.D. student in Linguistics at New York University. I mainly work on the evolving status of regional variation in linguistic identity, especially what role it plays in an increasingly mobile and diverse society composed of intersecting identities. 
+Hi! I'm Joey Zobel <u class="ipa">(/ˈdʒoʊi ˈzoʊbɫ̩/) (he/him/his)</u>. I'm a sociophonetician and Ph.D. student in Linguistics at New York University. I'm mainly interested in the evolving status of regional variation in linguistic identity and its role in an increasingly mobile and diverse society. 
 	</p>
 	<p>
-Much of my past sociolinguistic work has focused on Appalachian and Southern English, but I'm also interested more broadly in North American English and other minority languages in the United States and Canada. In addition to English, I've done fieldwork in Georgian and phonetic studies on French and Hindi. 
+Much of my past sociolinguistic work has focused on Appalachian and Southern English, but I'm also interested more broadly in North American English and other minority languages in the United States and Canada. In addition to English, I've done fieldwork in Georgian and phonetic work with French and Hindi. 
     	</p>
 
 	<p>
 When I'm not studying languages, you can find me playing classical piano, singing in choir, listening to Taylor Swift, and/or reading literary fiction.
 	</p>
 
-	<h2>
+	<h2 class = "h2-index">
 	Education & Background
 	</h2>
 
@@ -60,12 +63,22 @@ When I'm not studying languages, you can find me playing classical piano, singin
 I received a B.A. in Linguistics from Pomona College in 2025, where I minored in Mathematics and Late Antique–Medieval Studies. At Pomona, I worked with <a href="https://www.pomona.edu/directory/people/ernesto-gutierrez-topete" style = "color: black" target="_blank"> Ernesto R. Gutiérrez Topete</a>, <a href="https://mary-paster.sites.pomona.edu/" style = "color:black" target="_blank"> Mary Paster</a>, <a href="https://nicolerholliday.wordpress.com/" style = "color:black" target="_blank"> Nicole R. Holliday</a>, and <a href="https://www.pomona.edu/directory/people/kenneth-baxter-wolf" style = "color:black" target="_blank"> Ken Wolf</a>, and my senior project was a sociolinguistic analysis of the use of <i>y'all</i> in online discourse. 
 	</p>
 	<p>
-In the summer of 2025, I was an intern at Harvard University's Lab for Developmental Studies, where I worked on language acquisition with <a href="https://psychology.fas.harvard.edu/people/elika-bergelson" style = "color:black" target="_blank">Elika Bergelson</a> and <a href="https://psychology.fas.harvard.edu/people/jesse-snedeker" style = "color:black" target="_blank">Jesse Snedeker</a>. 
+In 2025, I was a summer intern at Harvard University's Lab for Developmental Studies, where I worked on language acquisition with <a href="https://psychology.fas.harvard.edu/people/elika-bergelson" style = "color:black" target="_blank">Elika Bergelson</a> and <a href="https://psychology.fas.harvard.edu/people/jesse-snedeker" style = "color:black" target="_blank">Jesse Snedeker</a>. 
 	</p>
 
     </div>
 
     <div class = "footer"> </div>
-	  
+
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+  </script>
+
+
   </body>
 </html>
